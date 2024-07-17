@@ -101,8 +101,8 @@ void loop()
     servo.write(90);
     while(waitTime > 0)
     {
-      delay(1000);
-      waitTime -= 1000; //This wont be exact, but it will be close enough for the purpose of this product
+      delay(996); //Slightly adjusted after running for 30 minutes and calculating offset in timing compared to a normal clock, 
+      waitTime -= 1000; //this will still be inaccurate to about 1 second per 40 minutes, but this is a small error and not detrimental to the overall purpose of the product
       calculateTime();
     }
     lcd.setCursor(0, 0);
